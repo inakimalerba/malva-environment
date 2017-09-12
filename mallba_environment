@@ -1,0 +1,15 @@
+MALLBA_DIR=/opt/mallba
+MALLBA_INC=${MALLBA_DIR}/inc
+MALLBA_LIB=${MALLBA_DIR}/lib
+MALLBA_SRC=${MALLBA_DIR}/src
+MALLBA_REP=${MALLBA_DIR}/rep
+MPI_BIN=/usr/bin
+
+CXX=$(MPI_BIN)/mpic++
+RUN=$(MPI_BIN)/mpirun
+#other options: -g for debugging and -pg for profiling
+#CPPFLAGS=-I$(MALLBA_INC) -Wno-deprecated -O3
+CPPFLAGS=-I$(MALLBA_INC) -O3
+LDFLAGS=-L$(MALLBA_LIB)
+LOADLIBES=-lmallba  -lm
+
